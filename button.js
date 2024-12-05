@@ -1,12 +1,11 @@
 const checkButton = () => {
-
     return [
         [
           { text: '$ Доллар', callback_data: 'usd' },
           { text: '€ Евро', callback_data: 'eur' },
         ],
         [
-          { text: '₸ Теньге', callback_data: 'kzt' },
+          { text: '₸ Тенге', callback_data: 'kzt' },
           { text: '₽ Рубли', callback_data: 'rub' },
         ],
         [
@@ -19,6 +18,46 @@ const checkButton = () => {
       ];
 }
 
+const valuteBack = () => {
+  return [
+    [
+      { text: 'Назад', callback_data: 'back_to_valute' },
+    ]
+  ];
+}
+
+const bankBack = () => {
+  return [
+    [
+      { text: 'Назад', callback_data: 'back_to_bank' },
+    ]
+  ];
+}
+
+const bank_selection = () => {
+  return [
+    [
+      { text: '💳 Kaspi', callback_data: 'kaspi' },
+    ],
+    [
+      { text: '🏦 Halyk', callback_data: 'halyk' },
+    ],
+    [
+      { text: '💵 Simply', callback_data: 'simply' } 
+    ],
+    [
+      { text: 'Назад', callback_data: 'back_to_start' },
+    ]
+    
+  ];
+}
+const buttonHistory = () => {
+  return [
+    [
+      { text: 'Назад', callback_data: 'back_to_start' },
+    ],
+  ];
+}
 const buttonsStart = () => {
     return [
         [
@@ -28,10 +67,9 @@ const buttonsStart = () => {
           { text: '📊 Статистика', callback_data: 'stats' },
         ],
         [
-          { text: '🏦 Банки', callback_data: 'banks' }
+          { text: '💳 Пополнение / 💸 Снятие', callback_data: 'replenish' }
         ]
       ];
-    
 }
-module.exports = {checkButton, buttonsStart};
+module.exports = {checkButton, buttonsStart, valuteBack, bank_selection, bankBack, buttonHistory};
   
